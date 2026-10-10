@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shree Shathvi — Software Developer & Machine Learning</title>
+  <meta name="description" content="Personal portfolio of Shree Shathvi, Computer Science graduate (2026) from Ayya Nadar Janaki Ammal College. Aspiring Software Developer & Machine Learning enthusiast.">
+  <meta name="keywords" content="Shree Shathvi, Software Developer, Machine Learning, Portfolio, Computer Science, Python, Java, MySQL, HTML, CSS">
+  <meta name="author" content="Shree Shathvi">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shree Shathvi — Software Developer & ML">
+  <meta property="og:description" content="hello. I am Shree Shathvi. Software Development & Machine Learning Portfolio 2026.">
+  <meta property="og:url" content="https://shreeshathvi.github.io">
+
+  <!-- Favicon: Modern SVG Monogram -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23060608'/><circle cx='50' cy='50' r='42' fill='none' stroke='%23f59e0b' stroke-width='4'/><text x='50%' y='58%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='38' font-weight='900' fill='%23ffffff'>SS</text></svg>">
+
+  <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Theme Preference Pre-Execution -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('shree_theme_preference');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialTheme = savedTheme ? savedTheme : (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', initialTheme);
+    })();
+  </script>
+</head>
+<body>
+  <!-- Accessibility: Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- Subtle Ambient Glow Spheres -->
+  <div class="ambient-glow-wrapper" aria-hidden="true">
+    <div class="ambient-glow-sphere top-left"></div>
+    <div class="ambient-glow-sphere bottom-right"></div>
+  </div>
+
+  <!-- ========================================================
+       DESKTOP RIGHT RAIL NAVIGATION
+  ======================================================== -->
+  <aside class="right-rail-nav" id="right-rail-nav" aria-label="Quick Navigation">
+    <div class="rail-nav-links">
+      <button type="button" class="rail-nav-item active" data-target="intro" aria-label="Navigate to Intro section">
+        <span class="rail-nav-label">Intro</span>
+        <span class="rail-nav-indicator"></span>
+      </button>
+      <button type="button" class="rail-nav-item" data-target="profile" aria-label="Navigate to Profile section">
+        <span class="rail-nav-label">Profile</span>
+        <span class="rail-nav-indicator"></span>
+      </button>
+      <button type="button" class="rail-nav-item" data-target="summary" aria-label="Navigate to Summary section">
+        <span class="rail-nav-label">Summary</span>
+        <span class="rail-nav-indicator"></span>
+      </button>
+      <button type="button" class="rail-nav-item" data-target="education" aria-label="Navigate to Education section">
+        <span class="rail-nav-label">Education</span>
+        <span class="rail-nav-indicator"></span>
+      </button>
+      <button type="button" class="rail-nav-item" data-target="projects" aria-label="Navigate to Projects section">
+        <span class="rail-nav-label">Projects</span>
+        <span class="rail-nav-indicator"></span>
+      </button>
+      <button type="button" class="rail-nav-item" data-target="capabilities" aria-label="Navigate to Capabilities section">
+        <span class="rail-nav-label">Capabilities</span>
+        <span class="rail-nav-indicator"></span>
+      </button>
+      <button type="button" class="rail-nav-item" data-target="connect" aria-label="Navigate to Connect section">
+        <span class="rail-nav-label">Connect</span>
+        <span class="rail-nav-indicator"></span>
+      </button>
+    </div>
+
+    <!-- Right Rail Footer Utilities -->
+    <div class="rail-footer-actions">
+      <!-- Theme Switcher Toggle -->
+      <button type="button" class="rail-action-btn" id="theme-toggle" aria-label="Toggle theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
+
+      <!-- Vertical Social Links -->
+      <div class="rail-social-list">
+        <a href="https://www.linkedin.com/in/shree-shathvi-49511b281/" target="_blank" rel="noopener noreferrer" class="rail-social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+        <a href="https://github.com/shreeshathvi" target="_blank" rel="noopener noreferrer" class="rail-social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+        </a>
+        <a href="mailto:shreeshathvi@gmail.com" class="rail-social-link" aria-label="Email Shree Shathvi">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================
+       MOBILE TOP NAVIGATION (SHOWN ON < 1024PX)
+  ======================================================== -->
+  <header class="mobile-top-nav" id="mobile-top-nav">
+    <a href="#intro" class="mobile-brand-link">
+      <span>Shree Shathvi<span style="color: var(--color-accent-light);">.</span></span>
+    </a>
+    <div class="mobile-nav-controls">
+      <button type="button" class="mobile-theme-btn" id="mobile-theme-toggle" aria-label="Toggle theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
+      <button type="button" class="mobile-menu-btn" id="mobile-hamburger-btn" aria-label="Open mobile menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <a href="#intro" class="mobile-drawer-link">Intro</a>
+    <a href="#profile" class="mobile-drawer-link">Profile</a>
+    <a href="#summary" class="mobile-drawer-link">Summary</a>
+    <a href="#education" class="mobile-drawer-link">Education</a>
+    <a href="#projects" class="mobile-drawer-link">Projects</a>
+    <a href="#capabilities" class="mobile-drawer-link">Capabilities</a>
+    <a href="#connect" class="mobile-drawer-link">Connect</a>
+  </div>
+
+  <!-- ========================================================
+       MAIN WRAPPER & SECTIONS
+  ======================================================== -->
+  <main class="main-wrapper" id="main-content">
+
+    <!-- ----------------------------------------------------
+         1. HERO SECTION (#intro)
+    ---------------------------------------------------- -->
+    <section class="hero-section" id="intro" aria-label="Introduction">
+      <!-- Huge Subtle Background Watermark -->
+      <div class="hero-watermark" aria-hidden="true">SHREE SHATHVI</div>
+
+      <!-- Hero Grid Layout -->
+      <div class="hero-grid">
+
+        <!-- Left Vertical Rotated Tags -->
+        <div class="hero-left-tags" aria-hidden="true">
+          <div class="hero-vertical-text-wrap">
+            <p class="vertical-tag-item">Software Development <span class="accent-slash">/</span></p>
+            <p class="vertical-tag-item">Machine Learning <span class="accent-slash">/</span></p>
+          </div>
+        </div>
+
+        <!-- Center Hero Typography -->
+        <div class="hero-center-group">
+          <h2 class="hero-hello-text">hello<span class="accent-dot">.</span></h2>
+          <h2 class="hero-iam-text">I am</h2>
+
+          <!-- Interactive Name Container (Click to change color) -->
+          <div class="hero-name-container" id="hero-name-container" role="button" tabindex="0" aria-label="Click name to change color">
+            <h1 class="hero-name-title" id="hero-name">Shree Shathvi</h1>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Left Portfolio 2026 Tag -->
+      <div class="hero-bottom-left" aria-hidden="true">
+        <span class="portfolio-year-text">PORTFOLIO 2026</span>
+        <div class="portfolio-accent-line"></div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         2. PROFILE SECTION (#profile)
+    ---------------------------------------------------- -->
+    <section class="editorial-section" id="profile" aria-labelledby="profile-title">
+      <div class="section-header-group">
+        <div class="section-header-watermark" aria-hidden="true">PROFILE</div>
+        <h2 class="section-header-title" id="profile-title">
+          <span class="section-header-slash">/</span> Profile
+        </h2>
+        <p class="section-header-subtitle">ACADEMIC & TECHNICAL FOUNDATION</p>
+      </div>
+
+      <div class="profile-content-wrap">
+        <div class="editorial-card-frame">
+          <div class="profile-badge-row">
+            <span class="dev-profile-tag">DEV & ML PROFILE // 2026</span>
+            <div class="status-live-indicator">
+              <span class="live-pulse-dot"></span>
+              <span>Open to Software Roles</span>
+            </div>
+          </div>
+
+          <p class="profile-main-lead">
+            Computer Science graduate from <strong>Ayya Nadar Janaki Ammal College</strong> (2026), with hands-on experience building practical software architectures and predictive machine learning models. I turn real-world data into clean, functional, and dependable digital systems.
+          </p>
+
+          <div class="profile-details-grid">
+            <div class="profile-stat-box">
+              <span class="stat-key">Degree & Institution</span>
+              <span class="stat-value">B.Sc. Computer Science (Autonomous)</span>
+            </div>
+            <div class="profile-stat-box">
+              <span class="stat-key">Graduation Year</span>
+              <span class="stat-value">Class of 2026</span>
+            </div>
+            <div class="profile-stat-box">
+              <span class="stat-key">Core Stack</span>
+              <span class="stat-value">Python, Java, Spring Boot, MySQL</span>
+            </div>
+            <div class="profile-stat-box">
+              <span class="stat-key">Primary Focus</span>
+              <span class="stat-value">Software Engineering & Applied ML</span>
+            </div>
+          </div>
+
+          <div class="profile-chips-row">
+            <span class="editorial-chip">Python</span>
+            <span class="editorial-chip">Java</span>
+            <span class="editorial-chip">Spring Boot</span>
+            <span class="editorial-chip">MySQL</span>
+            <span class="editorial-chip">JavaScript</span>
+            <span class="editorial-chip">HTML</span>
+            <span class="editorial-chip">CSS</span>
+            <span class="editorial-chip">Scikit-Learn</span>
+            <span class="editorial-chip">Machine Learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         3. SUMMARY SECTION (#summary)
+    ---------------------------------------------------- -->
+    <section class="editorial-section" id="summary" aria-labelledby="summary-title">
+      <div class="section-header-group">
+        <div class="section-header-watermark" aria-hidden="true">SUMMARY</div>
+        <h2 class="section-header-title" id="summary-title">
+          <span class="section-header-slash">/</span> Summary
+        </h2>
+        <p class="section-header-subtitle">PERSPECTIVE & PASSION</p>
+      </div>
+
+      <div class="summary-container">
+        <!-- Main Statement Block -->
+        <div class="summary-statement-card">
+          <div class="summary-quote-mark" aria-hidden="true">&ldquo;</div>
+          <p class="summary-typing-quote">
+            <span id="summary-typewriter-text"></span><span class="typing-cursor" aria-hidden="true"></span>
+          </p>
+        </div>
+
+        <!-- Key Facts Strip -->
+        <div class="summary-facts-strip">
+          <div class="summary-fact-item">
+            <span class="fact-number">2+</span>
+            <span class="fact-label">Projects Shipped</span>
+          </div>
+          <div class="summary-fact-divider" aria-hidden="true"></div>
+          <div class="summary-fact-item">
+            <span class="fact-number">4+</span>
+            <span class="fact-label">Languages &amp; Frameworks</span>
+          </div>
+          <div class="summary-fact-divider" aria-hidden="true"></div>
+          <div class="summary-fact-item">
+            <span class="fact-number">ML</span>
+            <span class="fact-label">Scikit-Learn &amp; Pandas</span>
+          </div>
+          <div class="summary-fact-divider" aria-hidden="true"></div>
+          <div class="summary-fact-item">
+            <span class="fact-number">2026</span>
+            <span class="fact-label">Ready to Deploy</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         4. EDUCATION SECTION (#education)
+    ---------------------------------------------------- -->
+    <section class="editorial-section" id="education" aria-labelledby="education-title">
+      <div class="section-header-group">
+        <div class="section-header-watermark" aria-hidden="true">EDUCATION</div>
+        <h2 class="section-header-title" id="education-title">
+          <span class="section-header-slash">/</span> Education
+        </h2>
+        <p class="section-header-subtitle">ACADEMIC EXCELLENCE & CREDENTIALS</p>
+      </div>
+
+      <div class="education-container">
+        <div class="education-card">
+          <div class="education-card-top">
+            <h3 class="education-institution">Ayya Nadar Janaki Ammal College (Autonomous)</h3>
+            <span class="education-badge">2023 — 2026</span>
+          </div>
+          <p class="education-degree">Bachelor of Science in Computer Science (B.Sc. CS)</p>
+          <p class="education-meta">Sivakasi, Tamil Nadu, India • Full-Time Undergraduate Program</p>
+
+          <div class="education-coursework">
+            <p class="coursework-title">Relevant Core Curriculum</p>
+            <div class="coursework-tags">
+              <span class="editorial-chip">Data Structures & Algorithms</span>
+              <span class="editorial-chip">Object-Oriented Programming (Java / Python)</span>
+              <span class="editorial-chip">Database Management Systems (MySQL)</span>
+              <span class="editorial-chip">Machine Learning Fundamentals</span>
+              <span class="editorial-chip">Web Technologies (HTML / CSS)</span>
+              <span class="editorial-chip">Operating Systems & Software Engineering</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         5. PROJECTS SECTION (#projects)
+    ---------------------------------------------------- -->
+    <section class="editorial-section" id="projects" aria-labelledby="projects-title">
+      <div class="section-header-group">
+        <div class="section-header-watermark" aria-hidden="true">PROJECTS</div>
+        <h2 class="section-header-title" id="projects-title">
+          <span class="section-header-slash">/</span> Projects
+        </h2>
+        <p class="section-header-subtitle">FEATURED SOFTWARE & MACHINE LEARNING BUILDS</p>
+      </div>
+
+      <div class="projects-container">
+        <!-- Filter Buttons -->
+        <div class="project-filters-row">
+          <button type="button" class="filter-btn active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+          <button type="button" class="filter-btn" data-filter="software-dev">Software Development</button>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="projects-grid">
+
+          <!-- Project Card 1: NAVIRA AI -->
+          <div class="project-card" data-category="machine-learning">
+            <div class="project-card-header">
+              <h3 class="project-title">NAVIRA AI — Smart Travel Risk & Route Intelligence</h3>
+              <span class="project-status-pill completed">Completed</span>
+            </div>
+            <p class="project-description">
+              An AI-powered travel safety platform evaluating road accident severity and route vulnerability. Employs Random Forest classification and K-Means clustering over geographic incident patterns to provide actionable risk scores.
+            </p>
+            <div class="project-tech-tags">
+              <span class="tech-tag-chip">Python</span>
+              <span class="tech-tag-chip">Scikit-Learn</span>
+              <span class="tech-tag-chip">Random Forest</span>
+              <span class="tech-tag-chip">K-Means</span>
+              <span class="tech-tag-chip">Pandas</span>
+            </div>
+            <div class="project-links-row">
+              <a href="https://navira-ai-pink.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-action-link">
+                <span>Live Demo</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <a href="https://github.com/shreeshathvi/NAVIRA-AI" target="_blank" rel="noopener noreferrer" class="project-action-link">
+                <span>GitHub</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project Card 2: Inventory Management System -->
+          <div class="project-card" data-category="software-dev">
+            <div class="project-card-header">
+              <h3 class="project-title">Web-Based Inventory Management System</h3>
+              <span class="project-status-pill completed">Completed</span>
+            </div>
+            <p class="project-description">
+              A comprehensive stock control application engineered with Java and MySQL. Provides complete CRUD operations, automated low-stock warnings, and structured relational persistence for warehouse inventories.
+            </p>
+            <div class="project-tech-tags">
+              <span class="tech-tag-chip">Java</span>
+              <span class="tech-tag-chip">MySQL</span>
+              <span class="tech-tag-chip">HTML</span>
+              <span class="tech-tag-chip">CSS</span>
+            </div>
+            <div class="project-links-row">
+              <a href="https://github.com/shreeshathvi/inventory-management" target="_blank" rel="noopener noreferrer" class="project-action-link">
+                <span>GitHub</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         6. CAPABILITIES SECTION (#capabilities)
+    ---------------------------------------------------- -->
+    <section class="editorial-section" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="section-header-group">
+        <div class="section-header-watermark" aria-hidden="true">CAPABILITIES</div>
+        <h2 class="section-header-title" id="capabilities-title">
+          <span class="section-header-slash">/</span> Capabilities
+        </h2>
+        <p class="section-header-subtitle">TECHNICAL SKILL INVENTORY</p>
+      </div>
+
+      <div class="capabilities-grid">
+        <!-- Capability Card 1: Programming & Databases -->
+        <div class="capability-card">
+          <div class="capability-card-top">
+            <div class="capability-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="capability-title">Programming & Databases</h3>
+          </div>
+          <div class="capability-chips">
+            <span class="capability-chip">Python</span>
+            <span class="capability-chip">Java</span>
+            <span class="capability-chip">Spring Boot</span>
+            <span class="capability-chip">SQL / MySQL</span>
+          </div>
+        </div>
+
+        <!-- Capability Card 2: Machine Learning & AI -->
+        <div class="capability-card">
+          <div class="capability-card-top">
+            <div class="capability-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 class="capability-title">Machine Learning & AI</h3>
+          </div>
+          <div class="capability-chips">
+            <span class="capability-chip">Scikit-Learn</span>
+            <span class="capability-chip">Pandas & NumPy</span>
+            <span class="capability-chip">Random Forest</span>
+            <span class="capability-chip">K-Means Clustering</span>
+            <span class="capability-chip">Support Vector Machines</span>
+            <span class="capability-chip">Feature Engineering</span>
+          </div>
+        </div>
+
+        <!-- Capability Card 3: Web & UI -->
+        <div class="capability-card">
+          <div class="capability-card-top">
+            <div class="capability-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="capability-title">Web & UI</h3>
+          </div>
+          <div class="capability-chips">
+            <span class="capability-chip">HTML</span>
+            <span class="capability-chip">CSS</span>
+            <span class="capability-chip">JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         7. RESUME & CONNECT SECTION (#connect)
+    ---------------------------------------------------- -->
+    <section class="editorial-section" id="connect" aria-labelledby="connect-title">
+      <div class="section-header-group">
+        <div class="section-header-watermark" aria-hidden="true">CONNECT</div>
+        <h2 class="section-header-title" id="connect-title">
+          <span class="section-header-slash">/</span> Let's Connect
+        </h2>
+        <p class="section-header-subtitle">CAREER OPPORTUNITIES & COLLABORATIONS</p>
+      </div>
+
+      <div class="connect-container">
+        <!-- Resume CTA Card -->
+        <div class="resume-cta-card">
+          <div class="resume-badge-tag">OFFICIAL RESUME // ATS FORMAT</div>
+          <h3 class="resume-headline">Ready to work together?</h3>
+          <p class="resume-subtext">
+            Download my verified single-page resume featuring full-stack development, machine learning credentials, and direct contact details.
+          </p>
+          <div class="resume-actions-group">
+            <a href="assets/resume.pdf?v=2026" download="Shree_Shathvi_Resume.pdf" class="resume-download-btn" id="resume-download-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download PDF</span>
+            </a>
+            <a href="assets/resume.pdf?v=2026" target="_blank" rel="noopener noreferrer" class="resume-view-btn" id="resume-view-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <span>View Online</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3-Column Social Grid -->
+        <div class="connect-social-grid">
+          <a href="https://www.linkedin.com/in/shree-shathvi-49511b281/" target="_blank" rel="noopener noreferrer" class="social-card">
+            <div class="social-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </div>
+            <span class="social-platform-name">LinkedIn</span>
+            <span class="social-handle">Shree Shathvi</span>
+          </a>
+
+          <a href="https://github.com/shreeshathvi" target="_blank" rel="noopener noreferrer" class="social-card">
+            <div class="social-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </div>
+            <span class="social-platform-name">GitHub</span>
+            <span class="social-handle">@shreeshathvi</span>
+          </a>
+
+          <a href="mailto:shreeshathvi@gmail.com" class="social-card">
+            <div class="social-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+            </div>
+            <span class="social-platform-name">Email</span>
+            <span class="social-handle">shreeshathvi@gmail.com</span>
+          </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+          <p class="footer-text">Shree Shathvi • 2026 • All Rights Reserved</p>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive Feedback Toast -->
+  <div class="toast-notification" id="toast-notification" role="status" aria-live="polite"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
